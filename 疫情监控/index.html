@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/china.js"></script>
+    <!-- <script src="js/dark.js"></script> -->
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="box leftBox">
+            <div class="leftBox-up">
+                <div class="time"></div>
+                <div id="total"></div>
+            </div>
+            <div id="leftBox-down"></div>
+        </div>
+        <div class="box centerBox">
+            <div class="centerBox-up">
+                <h1>全国疫情实时监控</h1>
+                <div class="item confirm">
+                    <p class="info infoconfirm"></p>
+                    <p class="detail">累计确诊</p>
+                </div>
+                <div class="item heal">
+                    <p class="info infoheal"></p>
+                    <p class="detail">累计治愈</p>
+                </div>
+                <div class="item dead">
+                    <p class="info infodead"></p>
+                    <p class="detail">累计死亡</p>
+                </div>
+                <div class="item nowConfirm">
+                    <p class="info infonowConfirm"></p>
+                    <p class="detail">现有确诊</p>
+                </div>
+                <div class="item noInfect">
+                    <p class="info infonoInfect"></p>
+                    <p class="detail">无症状感染者</p>
+                </div>
+                <div class="item importedCase">
+                    <p class="info infoimportedCase"></p>
+                    <p class="detail">境外输入</p>
+                </div>
+            </div>
+            <div id="centerBox-down">
+
+            </div>
+        </div>
+        <div class="box rightBox">
+            <div id="rightBox-up" style="width: 100%;height: 45%;"></div>
+            <div id="rightBox-down" style="width: 100%;height: 50%;"></div>
+        </div>
+    </div>
+</body>
+</html>
