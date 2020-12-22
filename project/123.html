@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="layui/layui/css/layui.css">
+    <script src="layui/layui/layui.js"></script>
+    <script src="jquery/jquery1.9/jquery-1.9.0.js"></script>
+</head>
+
+<body>
+  <script>
+    var x=2;while(x<=11){console.log(”好好学习，天天向上(4---)”);x++;}
+  
+    fn1();
+    var fn1 = function(a){ alert(a); }
+    console.log(9---)
+    // not function
+    
+    var b=100;
+    function aa(){
+      console.log(b);
+      var b=200;
+    }
+    aa();
+    console.log(b);
+    console.log(12---)
+    // 100
+    
+    var bb = 2;
+    function aa(bb){
+    bb = 2;
+    console.log(bb)
+    }
+    aa(bb);
+    console.log(bb)
+    console.log(14---)
+    // 2  2
+    
+     
+    var a1 = [1, 2, 12];
+        var a2 = [4, 23];
+        a1.concat(a2);
+          a1.sort();
+        console.log(a1.join(";"));
+      console.log(16---)
+      // 1;12;2
+      
+     var z=20;console.log(z++);console.log(z++);console.log(++z); 
+      console.log(19---)
+      // 20  21  23  
+      
+     var now = new Date(2001,1,31);
+     var m = now.getMonth();
+     var d = now.getDate(); 
+      console.log(m)
+      console.log(d)
+      console.log(20)
+      // 2 3
+      
+      
+      //jQuery中$()的作用
+      // $就是jquery对象，$()就是jQuery()，在里面可以传参数，作用就是获取元素
+    //属性选择器
+    // $("p") 选取所有的<p>元素
+      
+      
+    var a = 6;
+    if(a > 5){
+    a = a + 4;
+    }else if(a == 9){
+    a = a + 4;
+    }else if(a == 13){
+    a = a + 5;
+    }else{
+    a = a + 6;
+    }  
+    console.log(a);
+// 10
+// undefined
+    
+      //jQuery实现全选全不选
+        $(function(){
+            $("#selectBtn").click(function(){
+                console.log($("#selectBtn"));//selectBtn对应的jQuery对象
+                console.log(this);//selectBtn对应的DOM对象
+                
+                $("tbody input[name='select']").prop("checked",this.checked);
+                console.log(this.checked);
+            
+            });
+            })
+
+
+      //给Array本地对象增加一个原型方法，它用于删除数组条目中重复的数据，返回值是一个没有重复数据的新数组
+      //打印直角三角形
+            
+    for(var i=1;i<=5;i++){
+      for(var j=1;j<=i;j++){
+            document.write("♥");
+      }
+    }
+		document.write("<br/>");
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

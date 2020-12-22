@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="layui/layui/css/layui.css">
+    <link rel="stylesheet" href="swiper/package/css/swiper.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <script src="data/data.js"></script>
+    <script src="jquery/jquery1.9/jquery-1.9.0.min.js"></script>
+    <script src="layui/layui/layui.js"></script>
+    <script src="swiper/package/js/swiper.js"></script>
+    <script src="js/login.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <form class="layui-form" action="">
+            <h2 style="text-align: center;margin: 20px 0 20px 0;">登录用户</h2>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户名</label>
+                    <div class="layui-input-block">
+                    <input type="text" 
+                        name="title" 
+                        required  
+                        lay-verify="required" 
+                        placeholder="请输入用户名" 
+                        autocomplete="off" 
+                        class="layui-input"
+                        style="width:87%"
+                        id="username">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-inline" style="width: 330px; margin-right:0;">
+                    <input type="password" 
+                           name="password" 
+                           required lay-verify="required" 
+                           placeholder="请输入密码" 
+                           autocomplete="off" 
+                           class="layui-input"
+                           style="width:87%"
+                           id="password">
+                    </div>
+                    <!-- <div class="layui-form-mid layui-word-aux">辅助文字</div> -->
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">验证码</label>
+                    <div class="layui-input-inline" style="width: 300px;">
+                        <input
+                            name="password" 
+                            required lay-verify="required" 
+                            placeholder="请输入验证码" 
+                            autocomplete="off" 
+                            class="layui-input input-val"
+                            style="width: 182px; display: inline-block;">
+                        <!-- <input type="text" class="layui-input code input-val" style="display: inline-block;"> -->
+                        <canvas id="canvas" width="100" height="30"></canvas>
+                    </div>
+                    <!-- <div class="layui-form-mid layui-word-aux">辅助文字</div> -->
+                </div>
+                
+                <div class="layui-form-item">
+                    <div class="layui-input-block" style="text-align: center; margin: 20px 0 0 0;">
+                        <button class="layui-btn btn" 
+                            lay-submit lay-filter="formDemo" 
+                            style="width: 200px;"
+                            onclick=login()>登录</button>
+                    </div>
+                </div>
+                <div style="width: 450px; text-align: right;">
+                    <p><a href="./register.html"  style="color: #009688;">没有账户，请注册</a></p>
+                </div>
+        </form>
+                
+        <script>
+            //Demo
+            layui.use('form', function(){
+                var form = layui.form;
+            
+                //监听提交
+                form.on('submit(formDemo)', function(data){
+                    layer.msg(JSON.stringify(data.field));
+                    return false;
+                });
+            });
+        </script>
+
+
+    </div>
+</body>
+</html>

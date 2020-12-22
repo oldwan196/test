@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>图书管理后台
+  </title>
+  <link rel="stylesheet" href="layui/layui/css/layui.css">
+  <link rel="stylesheet" href="swiper/package/css/swiper.css">
+
+  <!-- 自己的css文件 -->
+  <link rel="stylesheet" href="css/home.css">
+
+  <!-- jQuery文件 -->
+  <script src="jquery/jquery1.9/jquery-1.9.0.js"></script>
+  <!-- 数据文件 -->
+  <script src="data/data.js"></script>
+
+  <!-- layui中的js文件 -->
+  <script src="layui/layui/layui.js"></script>
+
+  <!-- swiper.js -->
+  <script src="swiper/package/js/swiper.min.js"></script>
+
+ 
+  <!-- 自己的js文件 -->
+  <script src="js/home.js"></script>
+
+
+
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo">图书管理后台</div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    <!-- <ul class="layui-nav layui-layout-left">
+      <li class="layui-nav-item"><a href="">控制台</a></li>
+      <li class="layui-nav-item"><a href="">商品管理</a></li>
+      <li class="layui-nav-item"><a href="">用户</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">其它系统</a>
+        <dl class="layui-nav-child">
+          <dd><a href="">邮件管理</a></dd>
+          <dd><a href="">消息管理</a></dd>
+          <dd><a href="">授权管理</a></dd>
+        </dl>
+      </li>
+    </ul> -->
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item">
+        <a href="javascript:;">
+          <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+          <span class="self"></span>
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="">基本资料</a></dd>
+          <dd><a href="">安全设置</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a id="out">退出</a></li>
+    </ul>
+  </div>
+  
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;" class="yhgl">用户管理</a>
+          <dl class="layui-nav-child">
+            <dd class="heihei"><a href="javascript:;"  class="yhgl">后台用户</a></dd>
+            <!-- <dd class="xixi"><a href="javascript:;">列表二</a></dd>
+            <dd><a href="javascript:;">列表三</a></dd> -->
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <!-- <a href="javascript:;"  class="yhgl">后台用户</a> -->
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:;" class="book">图书管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;" class="addBook">图书添加</a></dd>
+            <dd><a href="javascript:;" class="searchBook">图书查询</a></dd>
+            <dd><a href="javascript:;" class="hotBook">热销书展示</a></dd>
+          </dl>
+        </li>
+        <!-- <li class="layui-nav-item"><a href="">云市场</a></li>
+        <li class="layui-nav-item"><a href="">发布商品</a></li> -->
+      </ul>
+    </div>
+  </div>
+  
+  <div class="layui-body l-body">
+    <!-- 内容主体区域 -->
+    <div style="padding: 15px;" class="main">
+      <div class="mid">
+        <p>
+          <span class="userGl" style="color: #848484;">用户管理</span>
+          &nbsp;/&nbsp;
+          <span class="back">后台用户</span>
+        </p>
+        <div id="container">
+          <div class="mid-top">
+            <p class="search">
+                <input type="text" 
+                name="title" 
+                placeholder="请输入你的名称" 
+                autocomplete="off" 
+                class="layui-input searchInp">
+                <button class="layui-btn layui-btn-sm searchBtn" id="searchBtn">
+                  <i class="layui-icon layui-icon-search"></i>
+                </button>
+            </p>
+          </div>
+          <div class="content">
+            <div style="padding-top: 10px; border-top: 1px solid #eee;">
+                <button type="button" class="layui-btn layui-btn-sm addNewBook">新增</button>
+                <button type="button" class="layui-btn layui-btn-sm" id="add-user">新增</button>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-danger del-all delAllBook">删除全部</button>
+            </div>
+            <div>
+                <table class="layui-table">
+                    <colgroup>
+                      <col width="150">
+                      <col width="200">
+                      <col>
+                    </colgroup>
+                    <thead class="addTr">
+                    
+                    </thead>
+                    <tbody class="admin">
+                    
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+          <div class="swiper-search">
+            <!-- 轮播图 -->
+            <div class="swiper-container">
+              <div class="swiper-wrapper"></div>
+              <!-- 分页器 -->
+              <div class="swiper-pagination"></div>
+            </div>
+            <!-- 图书查询显示 -->
+            <div>
+            <table class="layui-table">
+                <colgroup>
+                  <col width="150">
+                  <col width="200">
+                  <col>
+                </colgroup>
+                <thead class="guessLikesHead">
+                
+                </thead>
+                <tbody class="guessLikesNews">
+                
+                </tbody>
+              </table>
+          </div>
+          </div>
+          <!-- 热销书展示 -->
+          <div>
+            <div class="hotBookShow" id="hotBookShow">
+            </div>
+            <div>
+              <div id="test1"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="layui-footer">
+    <!-- 底部固定区域 -->
+    © layui.com - 图书管理后台
+  </div>
+</div>
+
+<script>
+//JavaScript代码区域
+    layui.use('element', function(){
+    var element = layui.element;
+    
+    });
+    //弹出层宽度变化的问题
+    layui.use('layer', function(){
+      var layer = layui.layer;
+  
+
+    });              
+      
+</script>
+</body>
+</html>
+      

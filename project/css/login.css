@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../imgs/bg.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh);
+}
+.layui-form{
+    width: 500px;
+    height: 320px;
+    background: white;
+    padding: 20px 0 20px 0;
+}
+.layui-form-item{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.layui-form-label{
+    text-align-last: justify;
+}
+.code{
+    width: 80px;
+    
+}
+
+/* 验证码 */
+
+.input-val {
+    /* width: 200px;
+    height: 32px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; */
+  }
+  #canvas {
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    height: 38px;
+    width: 100px;
+    margin-top: -1px;
+}
+

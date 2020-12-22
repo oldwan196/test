@@ -1,0 +1,189 @@
+.l-body{
+    background: #eee;
+    /* padding: ; */
+
+
+
+}
+.jianjie{
+    width: 300px;
+}
+.jdesc{
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+/* 主体 */
+/* .mid{
+    padding: 0 0 0 20px;
+} */
+
+/* 轮播图 */
+.swiper-container {
+    /* width: 990px; */
+    text-align: center;
+}
+
+
+/* 搜索框父div */
+.mid-top{
+    background: white;
+    border-bottom: #eee;
+    height: 65px;
+    padding: 0 0 0 10px;
+    margin-top: 28px;
+}
+/* 搜索框 */
+.search{
+    line-height: 73px;
+}
+#searchBtn{
+    position: relative;
+    top: -1px;
+    right: 5px;
+    border-radius: 0 2px 2px 0;
+}
+.layui-input{
+    display: inline-block;
+    width: 210px;
+    height: 30px;
+    border-color: #009688;
+}
+.layui-icon-search{
+    height: 30px;
+    width: 50px;
+    border-color: #009688; 
+    color: white;
+    background: #009688;
+    font-size: 20px;
+    border: none;
+    position: relative;
+    right: -1px;
+}
+.content{
+    background: white;
+    padding: 0 10px 10px;
+}
+/* 用户表格 */
+th{
+    text-align: center !important;
+}
+td{
+    text-align: center !important;
+}
+
+/* 弹出层按钮 */
+/* .layui-layer-btn{
+    text-align: center !important;
+} */
+
+
+#photo{
+    border: 0;
+    display: none;
+    /* overflow: hidden; */
+}
+.choose{
+    width: 100px;
+    display: inline-block;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    background: #1e9fff;
+    color: white;
+    margin-left: 100px;
+
+}
+/* 预览图 */
+.showimg{
+    width: 100px;
+    height: 105px;
+    margin: 15px 0 0 100px;
+}
+#imgshow{
+    height: 95px;
+}
+#imgname{
+    width: 200px;
+    margin-left: -50px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.addNewBook{
+    display: none;
+}
+#add-user{
+    margin-left: 0;
+}
+/* 热销书展示 */
+.hotBookShow{
+    display: none;
+    width: 100%;
+    height: 640px;
+    background: white;
+    padding: 40px 0 20px 200px;
+    overflow: hidden;
+}
+.showBook{
+    width: 300px;
+    height: 300px;
+    border: 1px solid #b3b3b3;
+    float: left;
+    margin: 0 200px 30px 0;
+}
+/* 147 10 */
+.showBook1,.showBook4,.showBook7,.showBook10{
+    /* margin: 0 180px; */
+}
+.hotImg{
+    width: 100%;
+}
+.desc{
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    padding: 0 5px;
+}
+.price{
+    overflow: hidden;
+    padding: 0 5px;
+    margin-top: 6px;
+    height: 30px;
+}
+.newPrice{
+    color: red;
+    margin-right: 5px;
+    line-height: 30px;
+}
+.oldPrice{
+    color: #696969;
+    text-decoration: line-through;
+}
+.discount{
+    float: right;
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    width: 40px;
+    background: #3bb4f2;
+    border-radius: 3px;
+    text-align: center;
+}
+
+/* 翻页 */
+#test1{
+    background: white;
+    text-align: center;
+    /* display: none; */
+}
+
+
+
